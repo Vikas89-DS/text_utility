@@ -1,0 +1,47 @@
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# --- Virtual environment ---
+venv/
+env/
+ENV/
+.venv/
+
+# --- VSCode ---
+.vscode/
+
+# --- Byte-compiled / optimized / DLL files ---
+*.so
+*.dll
+*.dylib
+
+# --- Logs ---
+*.log
+
+# --- Test reports ---
+htmlcov/
+.coverage*
+.cache/
+
+# --- Environment variables ---
+.env
+.env.*
+
+# --- FastAPI / Uvicorn ---
+*.pid
+
+# --- Python packaging ---
+build/
+dist/
+*.egg-info/
+
+# --- Jupyter / Misc ---
+.ipynb_checkpoints/
+
+# --- OS specific ---
+Thumbs.db
+.DS_Store
