@@ -22,3 +22,8 @@ def sentiment_endpoint(text: str):
     else:
         return {"sentiment": "neutral"}
 
+@app.post("/wordcount")
+def wordcount_endpoint(text: str):
+    words = text.split()
+    return {"wordcount": len(words)}
+
