@@ -8,5 +8,6 @@ class SummaryRequest(BaseModel):
 
 @router.post("/summary")
 def summary_endpoint(request: SummaryRequest):
-    text = request.text
-    return {"summary": text[:50]}
+    text = request.text.strip()
+    summary = text[:100] + "..." if len(text) > 100 else text
+    return {"summary": summary}

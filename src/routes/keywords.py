@@ -9,5 +9,5 @@ class KeywordsRequest(BaseModel):
 @router.post("/keywords")
 def keywords_endpoint(request: KeywordsRequest):
     words = request.text.split()
-    unique_words = list(set(words))
+    unique_words = sorted(list(set(words)))
     return {"keywords": unique_words}

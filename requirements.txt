@@ -5,3 +5,5 @@ pytest-asyncio
 requests
 python-dotenv
 pydantic
+streamlit
+requests
