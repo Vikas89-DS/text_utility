@@ -3,11 +3,12 @@ from pydantic import BaseModel
 
 router = APIRouter()
 
-class SummaryRequest(BaseModel):
+class TextRequest(BaseModel):
     text: str
 
 @router.post("/summary")
-def summary_endpoint(request: SummaryRequest):
-    text = request.text.strip()
-    summary = text[:100] + "..." if len(text) > 100 else text
+async def summary_endpoint(request: TextRequest):
+    summary = request.text.strip()
+    if len(summary) > 120:
+        summary = summary[:120] + "..."
     return {"summary": summary}

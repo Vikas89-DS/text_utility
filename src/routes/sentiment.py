@@ -3,15 +3,15 @@ from pydantic import BaseModel
 
 router = APIRouter()
 
-class SentimentRequest(BaseModel):
+class TextRequest(BaseModel):
     text: str
 
 @router.post("/sentiment")
-def sentiment_endpoint(request: SentimentRequest):
-    text_lower = request.text.lower()
-    if "good" in text_lower:
+async def sentiment_endpoint(request: TextRequest):
+    txt = request.text.lower()
+    if "good" in txt or "great" in txt or "love" in txt or "best" in txt:
         return {"sentiment": "positive"}
-    elif "bad" in text_lower:
+    elif "bad" in txt or "worst" in txt or "hate" in txt or "terrible" in txt:
         return {"sentiment": "negative"}
     else:
         return {"sentiment": "neutral"}

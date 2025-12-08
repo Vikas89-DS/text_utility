@@ -3,10 +3,9 @@ from pydantic import BaseModel
 
 router = APIRouter()
 
-class WordCountRequest(BaseModel):
+class TextRequest(BaseModel):
     text: str
 
 @router.post("/wordcount")
-def wordcount_endpoint(request: WordCountRequest):
-    words = request.text.split()
-    return {"wordcount": len(words)}
+async def wordcount_endpoint(request: TextRequest):
+    return {"wordcount": len(request.text.split())}
