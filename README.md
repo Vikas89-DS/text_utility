@@ -1,63 +1,56 @@
-Text Utility API
+<h1 align="center">Text Utility API</h1>
 
-A lightweight, modular, production-ready FastAPI service that provides essential NLP utilities like text summarization, sentiment analysis, wordcount, and keyword extraction, along with a clean Streamlit UI.
+<p align="center">
+  <strong>A lightweight, modular, production-ready FastAPI service</strong> that provides essential NLP utilities like text summarization, sentiment analysis, wordcount, and keyword extraction, along with a clean Streamlit UI.
+</p>
 
-This project is designed to demonstrate practical use of:
+<p align="center">
+  This project is designed to demonstrate practical use of:<br>
+  Git & GitHub workflow (feature branching, PRs, merges) • GitHub Actions CI • Modular FastAPI architecture • Deployment on Render • Front-end + API integration using Streamlit
+</p>
 
-Git & GitHub workflow (feature branching, PRs, merges)
+<h2>🔧 Features</h2>
 
-GitHub Actions CI
+<h3>Backend (FastAPI)</h3>
+<ul>
+  <li><code>/summary</code> – Returns a short summary of the input text</li>
+  <li><code>/sentiment</code> – Classifies sentiment as positive, negative, or neutral</li>
+  <li><code>/wordcount</code> – Returns total number of words</li>
+  <li><code>/keywords</code> – Extracts unique keywords</li>
+</ul>
+<p><strong>All endpoints use unified BaseModel input and modular router architecture.</strong></p>
 
-Modular FastAPI architecture
+<h3>Frontend (Streamlit UI)</h3>
+<ul>
+  <li>Clean and minimal UI</li>
+  <li>Connects to deployed FastAPI backend</li>
+  <li>Allows users to interact with all features in one place</li>
+  <li>Instant results with JSON output</li>
+</ul>
 
-Deployment on Render
+<h2>🚀 Live Deployment</h2>
 
-Front-end + API integration using Streamlit
+<strong>Backend (FastAPI):</strong><br>
+<a href="https://text-utility-161s.onrender.com">https://text-utility-161s.onrender.com</a><br><br>
 
-🔧 Features
-Backend (FastAPI)
+<strong>Swagger Docs:</strong><br>
+<a href="https://text-utility-161s.onrender.com/docs">https://text-utility-161s.onrender.com/docs</a><br><br>
 
-/summary – Returns a short summary of the input text
-
-/sentiment – Classifies sentiment as positive, negative, or neutral
-
-/wordcount – Returns total number of words
-
-/keywords – Extracts unique keywords
-
-All endpoints use unified BaseModel input and modular router architecture.
-
-Frontend (Streamlit UI)
-
-Clean and minimal UI
-
-Connects to deployed FastAPI backend
-
-Allows users to interact with all features in one place
-
-Instant results with JSON output
-
-🚀 Live Deployment
-Backend (FastAPI):
-https://text-utility-161s.onrender.com
-
-Swagger Docs:
-https://text-utility-161s.onrender.com/docs
-
-Frontend (Streamlit):
-
+<strong>Frontend (Streamlit):</strong><br>
 (Will be added after UI deployment)
 
-📁 Project Structure
+<h2>📁 Project Structure</h2>
+
+<pre>
 text_utility/
 │
 ├── src/
 │   ├── main.py
 │   ├── routes/
-│   │     ├── summary.py
-│   │     ├── sentiment.py
-│   │     ├── wordcount.py
-│   │     └── keywords.py
+│   │   ├── summary.py
+│   │   ├── sentiment.py
+│   │   ├── wordcount.py
+│   │   └── keywords.py
 │   └── tests/
 │
 ├── ui/
@@ -67,51 +60,53 @@ text_utility/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+</pre>
 
-🛠️ Tech Stack
+<h2>🛠️ Tech Stack</h2>
+<ul>
+  <li>FastAPI – Backend API</li>
+  <li>Pytest – Unit tests</li>
+  <li>Streamlit – UI frontend</li>
+  <li>Requests – API communication</li>
+  <li>GitHub Actions – CI pipeline</li>
+  <li>Render – Deployment</li>
+</ul>
 
-FastAPI – Backend API
+<h2>🧪 Running Backend Locally</h2>
 
-Pytest – Unit tests
-
-Streamlit – UI frontend
-
-Requests – API communication
-
-GitHub Actions – CI pipeline
-
-Render – Deployment
-
-🧪 Running Backend Locally
-Create environment
+<pre>
+# Create environment
 python -m venv venv
-source venv/bin/activate  (Windows: venv\Scripts\activate)
+source venv/bin/activate    # Windows: venv\Scripts\activate
 
-Install requirements
+# Install requirements
 pip install -r requirements.txt
 
-Run server
+# Run server
 uvicorn src.main:app --reload
+</pre>
 
-🖥️ Running UI Locally
+<h2>🖥️ Running UI Locally</h2>
+
+<pre>
 cd ui
 pip install -r requirements.txt
 streamlit run app.py
+</pre>
 
-⚙️ CI / CD Pipeline
+<h2>⚙️ CI / CD Pipeline</h2>
+<p>GitHub Actions automatically runs:</p>
+<ul>
+  <li>Test suite (pytest)</li>
+  <li>Linting</li>
+  <li>Build</li>
+  <li>Deployment trigger</li>
+</ul>
+<p><strong>Any PR merged into main triggers an auto-deploy on Render.</strong></p>
 
-GitHub Actions automatically runs:
+<h2>👨‍💻 Author</h2>
+<p><strong>Vikas</strong> – Building practical GenAI & NLP applications with modern backend workflows.</p>
 
-Test suite (pytest)
-
-Linting
-
-Build
-
-Deployment trigger
-
-Any PR merged into main triggers an auto-deploy on Render.
-
-👨‍💻 Author
-
-Vikas – Building practical GenAI & NLP applications with modern backend workflows.
+<p align="center">
+  <i>Made with ❤️ and lots of coffee</i>
+</p>
