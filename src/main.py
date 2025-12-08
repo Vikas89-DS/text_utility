@@ -27,3 +27,9 @@ def wordcount_endpoint(text: str):
     words = text.split()
     return {"wordcount": len(words)}
 
+@app.post("/keywords")
+def keywords_endpoint(text: str):
+    words = text.split()
+    unique_words = set(words)
+    return {"keywords": list(unique_words)}
+
